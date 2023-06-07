@@ -3,6 +3,8 @@ import Home from './components/layouts/Home'
 import CrearCliente from './components/layouts/clientes/CrearCliente'
 import ListarCliente from './components/layouts/clientes/ListarCliente'
 import EditarCliente from './components/layouts/clientes/EditarCliente'
+import CrearProductos from './components/layouts/productos/CrearProductos'
+import EditarProductos from './components/layouts/productos/EditarProductos'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,18 @@ const router = createBrowserRouter([
   {
     path: '/editarCliente/:id',
     element: <EditarCliente />,
+  },
+  {
+    path: '/crearProducto',
+    element: <CrearProductos />,
+  },
+  {
+    path: '/listarProducto',
+    element: <ListarCliente />,
+  },
+  {
+    path: '/editarProducto/id',
+    element: <EditarProductos />,
   },
 ])
 
