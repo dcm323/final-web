@@ -36,48 +36,54 @@ const CrearCliente = () => {
     returnListado('/listarCliente')
   }
   return (
-    <main>
+    <>
       <Header />
-      <form>
-        <input
-          onChange={(e) => setBarrio(e.target.value)}
-          placeholder={'Barrio: '}
-          type='text'
-        />
-        <input
-          onChange={(e) => setCiudad(e.target.value)}
-          placeholder={'Ciudad: '}
-          type='text'
-        />
-        <input
-          onChange={(e) => setCorreo(e.target.value)}
-          placeholder={'Correo: '}
-          type='text'
-        />
-        <input
-          onChange={(e) => setDireccion(e.target.value)}
-          placeholder={'Direccion: '}
-          type='text'
-        />
-        <input
-          onChange={(e) => setDocumento(e.target.value)}
-          placeholder={'Documento: '}
-          type='text'
-        />
-        <input
-          onChange={(e) => setNombre(e.target.value)}
-          placeholder={'Nombre: '}
-          type='text'
-        />
-        <input
-          onChange={(e) => setTelefono(e.target.value)}
-          placeholder={'Telefono: '}
-          type='text'
-        />
-        <input onChange={(e) => setImg(e.target.files[0])} type='file' />
-        <input onClick={agregarCliente} type='button' value='Agregar Cliente' />
-      </form>
-    </main>
+      <main>
+        <form>
+          <input
+            onChange={(e) => setBarrio(e.target.value)}
+            placeholder={'Barrio: '}
+            type='text'
+          />
+          <input
+            onChange={(e) => setCiudad(e.target.value)}
+            placeholder={'Ciudad: '}
+            type='text'
+          />
+          <input
+            onChange={(e) => setCorreo(e.target.value)}
+            placeholder={'Correo: '}
+            type='text'
+          />
+          <input
+            onChange={(e) => setDireccion(e.target.value)}
+            placeholder={'Direccion: '}
+            type='text'
+          />
+          <input
+            onChange={(e) => setDocumento(e.target.value)}
+            placeholder={'Documento: '}
+            type='text'
+          />
+          <input
+            onChange={(e) => setNombre(e.target.value)}
+            placeholder={'Nombre: '}
+            type='text'
+          />
+          <input
+            onChange={(e) => setTelefono(e.target.value)}
+            placeholder={'Telefono: '}
+            type='text'
+          />
+          <input onChange={(e) => setImg(e.target.files[0])} type='file' />
+          <input
+            onClick={agregarCliente}
+            type='button'
+            value='Agregar Cliente'
+          />
+        </form>
+      </main>
+    </>
   )
 }
 

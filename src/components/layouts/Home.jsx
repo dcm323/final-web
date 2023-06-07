@@ -1,7 +1,13 @@
 import React from 'react'
+import Header from '../helpers/Header'
 
 const Home = () => {
-  return <div>Home</div>
+  return (
+    <>
+      <Header />
+      <main>Home</main>
+    </>
+  )
 }
 
 export default Home
