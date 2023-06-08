@@ -31,7 +31,7 @@ const CrearCliente = () => {
       urlImg,
     }
     await addDoc(clienteCollection, cliente)
-    // returnListado('/listarCliente')
+    returnListado('/listarCliente')
   }
   return (
     <>
@@ -73,7 +73,7 @@ const CrearCliente = () => {
             placeholder={'Telefono: '}
             type='text'
           />
-          <input onChange={(e) => console.log(e)} type='file' />
+          <input onChange={(e) => setImg(e.target.files[0])} type='file' />
           <input
             onClick={agregarCliente}
             type='button'

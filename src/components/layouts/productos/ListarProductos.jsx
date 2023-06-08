@@ -32,7 +32,7 @@ const ListarProductos = () => {
           {productos.map((data) => (
             <section className='card-item' key={data.id}>
               <h1>{data.nombre}</h1>
-              <img className='img-lista' src={data.url} />
+              <img className='img-lista' src={data.urlImg} />
               <h1>{data.descripcion}</h1>
               <h1>{data.categoria}</h1>
               <h1>{data.cantidad}</h1>
