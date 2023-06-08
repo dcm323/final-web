@@ -19,8 +19,6 @@ const CrearCliente = () => {
 
   const agregarCliente = async () => {
     const urlImg = await subirImagen(img)
-    console.log(urlImg)
-
     const clienteCollection = collection(database, 'clientes')
     const cliente = {
       barrio,
@@ -33,7 +31,7 @@ const CrearCliente = () => {
       urlImg,
     }
     await addDoc(clienteCollection, cliente)
-    returnListado('/listarCliente')
+    // returnListado('/listarCliente')
   }
   return (
     <>
@@ -75,7 +73,7 @@ const CrearCliente = () => {
             placeholder={'Telefono: '}
             type='text'
           />
-          <input onChange={(e) => setImg(e.target.files[0])} type='file' />
+          <input onChange={(e) => console.log(e)} type='file' />
           <input
             onClick={agregarCliente}
             type='button'

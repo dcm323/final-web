@@ -1,7 +1,9 @@
-import { collection, deleteDoc, doc, getDocs } from 'firebase/firestore'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore'
+import { useState, useEffect } from 'react'
 import { database } from '../../../config/database'
 import { Link } from 'react-router-dom'
+import Header from '../../helpers/Header'
 
 const ListarProductos = () => {
   const [productos, setProductos] = useState([])
@@ -43,7 +45,7 @@ const ListarProductos = () => {
                 Eliminar
               </button>
               <button>
-                <Link to={'/editarProducto/' + data.id}>Editar</Link>
+                <Link to={'/editarProducto/' + data.id}>Edit</Link>
               </button>
             </section>
           ))}

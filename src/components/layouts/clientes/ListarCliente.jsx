@@ -13,11 +13,13 @@ const ListarCliente = () => {
     const data = await getDocs(clientesCollection)
     setClientes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
   }
+
   const eliminarCliente = async (id) => {
     const servicioEliminado = doc(database, 'clientes', id)
     await deleteDoc(servicioEliminado)
     mostrarClientes()
   }
+
   useEffect(() => {
     mostrarClientes()
   }, [])

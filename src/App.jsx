@@ -5,6 +5,7 @@ import ListarCliente from './components/layouts/clientes/ListarCliente'
 import EditarCliente from './components/layouts/clientes/EditarCliente'
 import CrearProductos from './components/layouts/productos/CrearProductos'
 import EditarProductos from './components/layouts/productos/EditarProductos'
+import ListarProductos from './components/layouts/productos/ListarProductos'
 
 const router = createBrowserRouter([
   {
@@ -29,10 +30,10 @@ const router = createBrowserRouter([
   },
   {
     path: '/listarProducto',
-    element: <ListarCliente />,
+    element: <ListarProductos />,
   },
   {
-    path: '/editarProducto/id',
+    path: '/editarProducto/:id',
     element: <EditarProductos />,
   },
 ])

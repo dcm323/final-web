@@ -9,20 +9,20 @@ const CrearProductos = () => {
   const [categoria, setCategoria] = useState('')
   const [descripcion, setDescripcion] = useState('')
   const [nombre, setNombre] = useState('')
-  const [urlImg, setUrlImg] = useState(null)
+  const [img, setImg] = useState(null)
   const [valor, setValor] = useState('')
 
   const returnListado = useNavigate()
 
   const agregar = async () => {
-    const url = await subirImagen(urlImg)
+    const urlImg = await subirImagen(img)
     const productoColeccion = collection(database, 'productos')
     const producto = {
       cantidad,
       categoria,
       descripcion,
       nombre,
-      url,
+      urlImg,
       valor,
     }
 
@@ -60,8 +60,8 @@ const CrearProductos = () => {
             placeholder={'Valor: '}
             type='text'
           />
-          <input onChange={(e) => setUrlImg(e.target.files[0])} type='file' />
-          <input onClick={agregar} type='button' value='Agregar Cliente' />
+          <input onChange={(e) => setImg(e.target.files[0])} type='file' />
+          <input onClick={agregar} type='button' value='Agregar' />
         </form>
       </main>
     </>
