@@ -3,8 +3,17 @@ import Home from './components/layouts/Home'
 import CrearCliente from './components/layouts/clientes/CrearCliente'
 import ListarCliente from './components/layouts/clientes/ListarCliente'
 import EditarCliente from './components/layouts/clientes/EditarCliente'
+
+import CrearProvedor from './components/layouts/provedores/CrearProvedor'
+import Provedores from './components/layouts/provedores/view/Provedores'
+import ListarProvedor from './components/layouts/provedores/ListarProvedor'
+import EditarProvedor from './components/layouts/provedores/EditarProvedor'
+
+
 import CrearProductos from './components/layouts/productos/CrearProductos'
 import EditarProductos from './components/layouts/productos/EditarProductos'
+import ListarProductos from './components/layouts/productos/ListarProductos'
+
 
 const router = createBrowserRouter([
   {
@@ -24,6 +33,24 @@ const router = createBrowserRouter([
     element: <EditarCliente />,
   },
   {
+
+    path: '/crearProvedor/',
+    element: <CrearProvedor/> ,
+  },
+  {
+    path:'/provedores',
+    element:<Provedores/>
+
+  },
+  {
+    path:'/listarProvedor',
+    element:<ListarProvedor/>
+  },
+  {
+    path:'/editarProvedor/:id',
+    element:<EditarProvedor/>
+  },
+
     path: '/crearProducto',
     element: <CrearProductos />,
   },
@@ -32,7 +59,7 @@ const router = createBrowserRouter([
     element: <ListarCliente />,
   },
   {
-    path: '/editarProducto/id',
+    path: '/editarProducto/:id',
     element: <EditarProductos />,
   },
 ])
