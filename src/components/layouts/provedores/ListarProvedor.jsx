@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import { database } from '../../../config/database'
 import { Link } from 'react-router-dom'
 import Header from '../../helpers/Header'
-import CrearProvedor from './CrearProvedor'
 
 const ListarProvedor = () => {
   const [provedores, setProvedores] = useState([])
@@ -26,13 +25,13 @@ const ListarProvedor = () => {
   return (
     <>
       <Header />
-      <Link to={'/crearProvedor'} >Agregar Provedor Nuevor</Link>
+      <Link to={'/crearProvedor'}>Agregar Provedor Nuevor</Link>
       <main>
         <section className='cards-container'>
           {provedores.map((data) => (
             <section className='card-item' key={data.id}>
-                <img className='img-lista' src={data.imgLogo} />
-                <img className='img-lista' src={data.imgGerente} />
+              <img className='img-lista' src={data.urlImgG} />
+              <img className='img-lista' src={data.urlImgL} />
               <h1>{data.nombre}</h1>
               <h1>{data.direccion}</h1>
               <h1>{data.ciudad}</h1>
@@ -48,7 +47,7 @@ const ListarProvedor = () => {
                 Eliminar
               </button>
               <button>
-                <Link to={'/editarProvedor/'+data.id}>Edit</Link>
+                <Link to={'/editarProvedor/' + data.id}>Edit</Link>
               </button>
             </section>
           ))}

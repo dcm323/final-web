@@ -39,3 +39,23 @@ main {
   justify-content: center;
   height: 93vh;
 }
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  height: 20rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+  transition: 0.2s;
+}
+
+.card-item img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}

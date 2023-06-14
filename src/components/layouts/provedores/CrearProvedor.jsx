@@ -4,7 +4,6 @@ import { database, subirImagen } from '../../../config/database.jsx'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-
 const CrearProvedor = () => {
   const [nombre, setNombre] = useState('')
   const [direccion, setDireccion] = useState('')
@@ -18,8 +17,10 @@ const CrearProvedor = () => {
   const returnListado = useNavigate()
 
   const agregarProvedor = async () => {
-    const urlImg = await subirImagen()
-    console.log(urlImg)
+    const urlImgG = await subirImagen(imgGerente)
+    const urlImgL = await subirImagen(imgLogo)
+    console.log(urlImgG)
+    console.log(urlImgL)
 
     const provedorCollection = collection(database, 'provedores')
     const provedor = {
@@ -29,30 +30,28 @@ const CrearProvedor = () => {
       nit,
       nombreGerente,
       telefono,
-      imgGerente,
-      imgLogo
+      urlImgG,
+      urlImgL,
     }
     await addDoc(provedorCollection, provedor)
     returnListado('/listarProvedor')
   }
   return (
     <>
-     
       <main>
         <form>
-         
           <input
             onChange={(e) => setCiudad(e.target.value)}
             placeholder={'Ciudad: '}
             type='text'
           />
-          
+
           <input
             onChange={(e) => setDireccion(e.target.value)}
             placeholder={'Direccion: '}
             type='text'
           />
-          
+
           <input
             onChange={(e) => setNit(e.target.value)}
             placeholder={'Nit: '}
@@ -73,10 +72,12 @@ const CrearProvedor = () => {
             placeholder={'Telefono: '}
             type='text'
           />
-          <input onChange={(e) => setImgGerente(e.target.files[0])} type='file' />
+          <input
+            onChange={(e) => setImgGerente(e.target.files[0])}
+            type='file'
+          />
           <input onChange={(e) => setImgLogo(e.target.files[0])} type='file' />
           <input
-          
             onClick={agregarProvedor}
             type='button'
             value='Agregar Provedor'
