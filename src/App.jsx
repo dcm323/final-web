@@ -34,9 +34,10 @@ const router = createBrowserRouter([
     path: '/crearProvedor/',
     element: <CrearProvedor />,
   },
+
   {
-    path: '/provedores',
-    element: <Provedores />,
+    path: '/crearProvedor',
+    element: <CrearProvedor />,
   },
   {
     path: '/listarProvedor',
@@ -47,16 +48,8 @@ const router = createBrowserRouter([
     element: <EditarProvedor />,
   },
   {
-    path: '/crearProvedor/',
-    element: <CrearProvedor />,
-  },
-  {
     path: '/provedores',
     element: <Provedores />,
-  },
-  {
-    path: '/listarProvedor',
-    element: <ListarProvedor />,
   },
   {
     path: '/editarProvedor/:id',
@@ -71,7 +64,6 @@ const router = createBrowserRouter([
     element: <ListarProductos />,
   },
   {
-    path: '/editarProducto/:id',
     path: '/editarProducto/:id',
     element: <EditarProductos />,
   },
