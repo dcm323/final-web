@@ -12,6 +12,7 @@ import EditarProvedor from './components/layouts/provedores/EditarProvedor'
 import CrearProductos from './components/layouts/productos/CrearProductos'
 import EditarProductos from './components/layouts/productos/EditarProductos'
 import ListarProductos from './components/layouts/productos/ListarProductos'
+import Movies from './components/layouts/Movies'
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
   {
     path: '/editarProducto/:id',
     element: <EditarProductos />,
+  },
+  {
+    path: '/movies',
+    element: <Movies />,
   },
 ])
 

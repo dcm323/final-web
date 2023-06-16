@@ -11,8 +11,8 @@ La funcionalidad anterior es únicamente para él como admin, pero es necesario 
 Criterios
 • Desarrollar la aplicación máxima en grupos de 3 personas
 • Entregar el proyecto en un repo de git
-• Incluir un buen diseño (el diseño es muy subje􀆟vo, pero entonces pensar como si fueran a vender el proyecto)
-• Crear un propuesta o maquetación (proto􀆟pado en cualquier herramienta de diseño)
+• Incluir un buen diseño (el diseño es muy subjetivo, pero entonces pensar como si fueran a vender el proyecto)
+• Crear un propuesta o maquetación (prototipado en cualquier herramienta de diseño)
 • Para los proveedores se debe mostrar el listado en una tabla
 • Para los productos se debe mostrar la información en una tabla
 • Para los clientes, contraseñas y empleados se debe mostrar cada registro en una card
