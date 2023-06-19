@@ -13,12 +13,18 @@ import CrearProductos from './components/layouts/productos/CrearProductos'
 import EditarProductos from './components/layouts/productos/EditarProductos'
 import ListarProductos from './components/layouts/productos/ListarProductos'
 import Movies from './components/layouts/Movies'
+import Admin from './components/layouts/Admin'
+import Commerce from './components/layouts/Commerce'
+import Clientes from './components/layouts/clientes/view/Clientes'
+import Productos from './components/layouts/productos/view/Productos'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
   },
+
+  //paths de clientes
   {
     path: '/crearCliente',
     element: <CrearCliente />,
@@ -32,10 +38,11 @@ const router = createBrowserRouter([
     element: <EditarCliente />,
   },
   {
-    path: '/crearProvedor/',
-    element: <CrearProvedor />,
+    path: '/clientes',
+    element: <Clientes />,
   },
 
+  //paths de provedores
   {
     path: '/crearProvedor',
     element: <CrearProvedor />,
@@ -52,10 +59,8 @@ const router = createBrowserRouter([
     path: '/provedores',
     element: <Provedores />,
   },
-  {
-    path: '/editarProvedor/:id',
-    element: <EditarProvedor />,
-  },
+
+  //paths de productos
   {
     path: '/crearProducto',
     element: <CrearProductos />,
@@ -69,8 +74,22 @@ const router = createBrowserRouter([
     element: <EditarProductos />,
   },
   {
+    path: '/productos',
+    element: <Productos />,
+  },
+
+  //paths adicionales
+  {
     path: '/movies',
     element: <Movies />,
+  },
+  {
+    path: '/admin',
+    element: <Admin />,
+  },
+  {
+    path: '/commerce',
+    element: <Commerce />,
   },
 ])
 

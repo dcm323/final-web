@@ -1,7 +1,8 @@
-import { doc, getDoc, updateDoc } from 'firebase/firestore'
-import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useState } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 import { database } from '../../../config/database'
+import { doc, getDoc, updateDoc } from 'firebase/firestore'
+import { useEffect } from 'react'
 import Header from '../../helpers/Header'
 
 const EditarProductos = () => {
@@ -14,7 +15,7 @@ const EditarProductos = () => {
   const returnListado = useNavigate()
   const { id } = useParams()
 
-  const editar = async () => {
+  const editarProducto = async () => {
     const coleccion = doc(database, 'productos', id)
     const producto = {
       cantidad,
@@ -70,7 +71,7 @@ const EditarProductos = () => {
               type='text'
             />
 
-            <input onClick={editar} type='button' value={'Editar'} />
+            <input onClick={editarProducto} type='button' value={'Editar'} />
           </form>
         </section>
       </main>

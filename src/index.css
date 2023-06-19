@@ -112,3 +112,35 @@ main {
   transform: scale(1.01);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+.admin-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 93vh;
+}
+
+.admin-item {
+  display: flex;
+  border: 1px solid black;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 15vw;
+  padding: 15vh;
+}
+
+.admin-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.admin-item a:hover {
+  color: #5d4e94;
+  transition: 0.2s;
+  font-size: 1.05rem;
+}

@@ -6,14 +6,12 @@ import { useEffect } from 'react'
 import Header from '../../helpers/Header'
 
 const EditarProvedor = () => {
-    const [nombre, setNombre] = useState('')
-    const [direccion, setDireccion] = useState('')
-    const [ciudad, setCiudad] = useState('')
-    const [nit, setNit] = useState('')
-    const [nombreGerente, setNombreGerente] = useState('')
-    const [telefono, setTelefono] = useState('')
-    const [imgGerente, setImgGerente] = useState(null)
-    const [imgLogo, setImgLogo] = useState(null)
+  const [nombre, setNombre] = useState('')
+  const [direccion, setDireccion] = useState('')
+  const [ciudad, setCiudad] = useState('')
+  const [nit, setNit] = useState('')
+  const [nombreGerente, setNombreGerente] = useState('')
+  const [telefono, setTelefono] = useState('')
   const returnListado = useNavigate()
   const { id } = useParams()
 
@@ -26,8 +24,6 @@ const EditarProvedor = () => {
       nit,
       nombreGerente,
       telefono,
-      imgGerente,
-      imgLogo
     }
     await updateDoc(provedorCollection, provedor)
     returnListado('/listarProvedor')
@@ -41,8 +37,6 @@ const EditarProvedor = () => {
     setNit(provedorEdit.data().nit)
     setNombreGerente(provedorEdit.data().nombreGerente)
     setTelefono(provedorEdit.data().telefono)
-    setImgGerente(provedorEdit.data().imgGerente)
-    setImgLogo(provedorEdit.data().imgLogo)
   }
 
   useEffect(() => {
@@ -53,42 +47,40 @@ const EditarProvedor = () => {
     <>
       <Header />
       <main>
-        <section >
-          <form >
-          <input
-            onChange={(e) => setCiudad(e.target.value)}
-            placeholder={ciudad}
-            type='text'
-          />
-          
-          <input
-            onChange={(e) => setDireccion(e.target.value)}
-            placeholder={direccion}
-            type='text'
-          />
-          
-          <input
-            onChange={(e) => setNit(e.target.value)}
-            placeholder={nit}
-            type='text'
-          />
-          <input
-            onChange={(e) => setNombre(e.target.value)}
-            placeholder={nombre}
-            type='text'
-          />
-          <input
-            onChange={(e) => setNombreGerente(e.target.value)}
-            placeholder={nombreGerente}
-            type='text'
-          />
-          <input
-            onChange={(e) => setTelefono(e.target.value)}
-            placeholder={telefono}
-            type='text'
-          />
-          <input onChange={(e) => setImgGerente(e.target.files[0])} type='file' />
-          <input onChange={(e) => setImgLogo(e.target.files[0])} type='file' />
+        <section>
+          <form>
+            <input
+              onChange={(e) => setCiudad(e.target.value)}
+              placeholder={ciudad}
+              type='text'
+            />
+
+            <input
+              onChange={(e) => setDireccion(e.target.value)}
+              placeholder={direccion}
+              type='text'
+            />
+
+            <input
+              onChange={(e) => setNit(e.target.value)}
+              placeholder={nit}
+              type='text'
+            />
+            <input
+              onChange={(e) => setNombre(e.target.value)}
+              placeholder={nombre}
+              type='text'
+            />
+            <input
+              onChange={(e) => setNombreGerente(e.target.value)}
+              placeholder={nombreGerente}
+              type='text'
+            />
+            <input
+              onChange={(e) => setTelefono(e.target.value)}
+              placeholder={telefono}
+              type='text'
+            />
 
             <input onClick={editarProvedor} type='button' value={'Editar'} />
           </form>

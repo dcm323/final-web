@@ -1,7 +1,11 @@
 import React from 'react'
 
 const Productos = () => {
-  return <div>Productos</div>
+  return (
+    <>
+      <h1>Productos View</h1>
+    </>
+  )
 }
 
 export default Productos

@@ -25,7 +25,6 @@ const ListarProvedor = () => {
   return (
     <>
       <Header />
-      <Link to={'/crearProvedor'}>Agregar Provedor Nuevor</Link>
       <main>
         <section className='cards-container'>
           {provedores.map((data) => (

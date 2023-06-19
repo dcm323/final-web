@@ -13,6 +13,7 @@ const EditarCliente = () => {
   const [documento, setDocumento] = useState('')
   const [nombre, setNombre] = useState('')
   const [telefono, setTelefono] = useState('')
+
   const returnListado = useNavigate()
   const { id } = useParams()
 
