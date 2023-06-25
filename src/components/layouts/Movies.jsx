@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Header from '../helpers/Header'
+import HeaderBs from '../helpers/HeaderBs'
 
 const Movies = () => {
   const [movies, setMovies] = useState([])
@@ -19,7 +19,7 @@ const Movies = () => {
 
   return (
     <>
-      <Header />
+      <HeaderBs />
       <main>
         <div className='movie-container'>
           {movies.map((data) => (

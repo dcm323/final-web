@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <main>Home</main>
+      <main className='commerce'>Home</main>
     </>
   )
 }

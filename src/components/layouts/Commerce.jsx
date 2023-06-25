@@ -5,6 +5,9 @@ const Commerce = () => {
   return (
     <>
       <HeaderBs />
+      <section className='commerce'>
+        <h5>Pagina comercial</h5>
+      </section>
     </>
   )
 }
