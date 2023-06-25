@@ -33,37 +33,64 @@ const CrearProductos = () => {
   return (
     <>
       <Header />
-      <main>
-        <form>
+      <form>
+        <div className='form-group form-control-sm'>
           <input
+            className='form-control'
             onChange={(e) => setNombre(e.target.value)}
             placeholder={'Nombre: '}
             type='text'
           />
+        </div>
+        <div className='form-group form-control-sm'>
           <input
+            className='form-control'
             onChange={(e) => setDescripcion(e.target.value)}
             placeholder={'Descripcion: '}
             type='text'
           />
+        </div>
+        <div className='form-group form-control-sm'>
           <input
+            className='form-control'
             onChange={(e) => setCategoria(e.target.value)}
             placeholder={'Categoria: '}
             type='text'
           />
+        </div>
+        <div className='form-group form-control-sm'>
           <input
+            className='form-control'
             onChange={(e) => setCantidad(e.target.value)}
             placeholder={'Cantidad: '}
             type='text'
           />
+        </div>
+        <div className='form-group form-control-sm'>
           <input
+            className='form-control'
             onChange={(e) => setValor(e.target.value)}
             placeholder={'Valor: '}
             type='text'
           />
-          <input onChange={(e) => setImg(e.target.files[0])} type='file' />
-          <input onClick={agregar} type='button' value='Agregar' />
-        </form>
-      </main>
+        </div>
+
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control-file'
+            onChange={(e) => setImg(e.target.files[0])}
+            type='file'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='btn btn-primary'
+            onClick={agregar}
+            type='button'
+            value='Agregar Cliente'
+          />
+        </div>
+      </form>
     </>
   )
 }

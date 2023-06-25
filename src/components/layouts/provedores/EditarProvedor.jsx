@@ -46,46 +46,65 @@ const EditarProvedor = () => {
   return (
     <>
       <Header />
-      <main>
-        <section>
-          <form>
-            <input
-              onChange={(e) => setCiudad(e.target.value)}
-              placeholder={ciudad}
-              type='text'
-            />
+      <form>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setCiudad(e.target.value)}
+            placeholder={ciudad}
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setDireccion(e.target.value)}
+            placeholder={direccion}
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setNit(e.target.value)}
+            placeholder={nit}
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setNombre(e.target.value)}
+            placeholder={nombre}
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setNombreGerente(e.target.value)}
+            placeholder={nombreGerente}
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setTelefono(e.target.value)}
+            placeholder={telefono}
+            type='text'
+          />
+        </div>
 
-            <input
-              onChange={(e) => setDireccion(e.target.value)}
-              placeholder={direccion}
-              type='text'
-            />
-
-            <input
-              onChange={(e) => setNit(e.target.value)}
-              placeholder={nit}
-              type='text'
-            />
-            <input
-              onChange={(e) => setNombre(e.target.value)}
-              placeholder={nombre}
-              type='text'
-            />
-            <input
-              onChange={(e) => setNombreGerente(e.target.value)}
-              placeholder={nombreGerente}
-              type='text'
-            />
-            <input
-              onChange={(e) => setTelefono(e.target.value)}
-              placeholder={telefono}
-              type='text'
-            />
-
-            <input onClick={editarProvedor} type='button' value={'Editar'} />
-          </form>
-        </section>
-      </main>
+        <div className='form-group form-control-sm'>
+          <input
+            className='btn btn-primary'
+            onClick={editarProvedor}
+            type='button'
+            value='Editar'
+          />
+        </div>
+      </form>
     </>
   )
 }

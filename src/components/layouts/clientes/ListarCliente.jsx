@@ -27,32 +27,37 @@ const ListarCliente = () => {
   return (
     <>
       <Header />
-      <main>
-        <section className='cards-container'>
+      <div className='container'>
+        <div className='row'>
           {clientes.map((data) => (
-            <section className='card-item' key={data.id}>
-              <h1>{data.nombre}</h1>
-              <img className='img-lista' src={data.urlImg} />
-              <h1>{data.documento}</h1>
-              <h1>{data.correo}</h1>
-              <h1>{data.telefono}</h1>
-              <h1>{data.direccion}</h1>
-              <h1>{data.barrio}</h1>
-              <h1>{data.ciudad}</h1>
-              <button
-                onClick={() => {
-                  eliminarCliente(data.id)
-                }}
-              >
-                Eliminar
-              </button>
-              <button>
-                <Link to={'/editarCliente/' + data.id}>Edit</Link>
-              </button>
-            </section>
+            <div className='col-md-4' key={data.id}>
+              <div className='card mb-4 my-3'>
+                <img className='card-img-top' src={data.urlImg} />
+                <div className='card-body text-center'>
+                  <h5 className='card-title'>{data.nombre}</h5>
+                  <p className='card-text'>{data.documento}</p>
+                  <p className='card-text'>{data.correo}</p>
+                  <p className='card-text'>{data.telefono}</p>
+                  <p className='card-text'>{data.direccion}</p>
+                  <p className='card-text'>{data.barrio}</p>
+                  <p className='card-text'>{data.ciudad}</p>
+                  <button
+                    className='btn btn-danger w-50 my-2'
+                    onClick={() => {
+                      eliminarCliente(data.id)
+                    }}
+                  >
+                    Eliminar
+                  </button>
+                  <button className='btn btn-primary w-50'>
+                    <Link to={'/editarCliente/' + data.id}>Edit</Link>
+                  </button>
+                </div>
+              </div>
+            </div>
           ))}
-        </section>
-      </main>
+        </div>
+      </div>
     </>
   )
 }

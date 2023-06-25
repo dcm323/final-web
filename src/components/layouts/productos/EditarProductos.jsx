@@ -42,39 +42,57 @@ const EditarProductos = () => {
   return (
     <>
       <Header />
-      <main>
-        <section className='form-container'>
-          <form className='form'>
-            <input
-              onChange={(e) => setNombre(e.target.value)}
-              placeholder={nombre}
-              type='text'
-            />
-            <input
-              onChange={(e) => setDescripcion(e.target.value)}
-              placeholder={descripcion}
-              type='text'
-            />
-            <input
-              onChange={(e) => setCategoria(e.target.value)}
-              placeholder={categoria}
-              type='text'
-            />
-            <input
-              onChange={(e) => setCantidad(e.target.value)}
-              placeholder={cantidad}
-              type='text'
-            />
-            <input
-              onChange={(e) => setValor(e.target.value)}
-              placeholder={valor}
-              type='text'
-            />
+      <form>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setNombre(e.target.value)}
+            placeholder={nombre}
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setDescripcion(e.target.value)}
+            placeholder={descripcion}
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setCategoria(e.target.value)}
+            placeholder={categoria}
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setCantidad(e.target.value)}
+            placeholder={cantidad}
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setValor(e.target.value)}
+            placeholder={valor}
+            type='text'
+          />
+        </div>
 
-            <input onClick={editarProducto} type='button' value={'Editar'} />
-          </form>
-        </section>
-      </main>
+        <div className='form-group form-control-sm'>
+          <input
+            className='btn btn-primary'
+            onClick={editarProducto}
+            type='button'
+            value='Agregar Cliente'
+          />
+        </div>
+      </form>
     </>
   )
 }

@@ -1,9 +1,10 @@
 import React from 'react'
+import HeaderBs from '../helpers/HeaderBs'
 
 const Commerce = () => {
   return (
     <>
-      <h1>Out</h1>
+      <HeaderBs />
     </>
   )
 }

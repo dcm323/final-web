@@ -50,49 +50,72 @@ const EditarCliente = () => {
   return (
     <>
       <Header />
-      <main>
-        <section className='form-container'>
-          <form className='form'>
-            <input
-              onChange={(e) => setNombre(e.target.value)}
-              placeholder={nombre}
-              type='text'
-            />
-            <input
-              onChange={(e) => setDocumento(e.target.value)}
-              placeholder={documento}
-              type='text'
-            />
-            <input
-              onChange={(e) => setCorreo(e.target.value)}
-              placeholder={correo}
-              type='text'
-            />
-            <input
-              onChange={(e) => setDireccion(e.target.value)}
-              placeholder={direccion}
-              type='text'
-            />
-            <input
-              onChange={(e) => setCiudad(e.target.value)}
-              placeholder={ciudad}
-              type='text'
-            />
-            <input
-              onChange={(e) => setBarrio(e.target.value)}
-              placeholder={barrio}
-              type='text'
-            />
-            <input
-              onChange={(e) => setTelefono(e.target.value)}
-              placeholder={telefono}
-              type='text'
-            />
-
-            <input onClick={editarCliente} type='button' value={'Editar'} />
-          </form>
-        </section>
-      </main>
+      <form>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setNombre(e.target.value)}
+            placeholder={nombre}
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setDocumento(e.target.value)}
+            placeholder={documento}
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setTelefono(e.target.value)}
+            placeholder={telefono}
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setCorreo(e.target.value)}
+            placeholder={correo}
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control '
+            onChange={(e) => setBarrio(e.target.value)}
+            placeholder={barrio}
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control '
+            onChange={(e) => setCiudad(e.target.value)}
+            placeholder={ciudad}
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setDireccion(e.target.value)}
+            placeholder={direccion}
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='btn btn-primary'
+            onClick={editarCliente}
+            type='button'
+            value={'Editar'}
+          />
+        </div>
+      </form>
     </>
   )
 }

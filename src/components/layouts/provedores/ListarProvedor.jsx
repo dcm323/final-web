@@ -25,33 +25,37 @@ const ListarProvedor = () => {
   return (
     <>
       <Header />
-      <main>
-        <section className='cards-container'>
+      <div className='container'>
+        <div className='row'>
           {provedores.map((data) => (
-            <section className='card-item' key={data.id}>
-              <img className='img-lista' src={data.urlImgG} />
-              <img className='img-lista' src={data.urlImgL} />
-              <h1>{data.nombre}</h1>
-              <h1>{data.direccion}</h1>
-              <h1>{data.ciudad}</h1>
-              <h1>{data.nit}</h1>
-              <h1>{data.nombreGerente}</h1>
-              <h1>{data.telefono}</h1>
-              <h1>{data.ciudad}</h1>
-              <button
-                onClick={() => {
-                  eliminarProvedor(data.id)
-                }}
-              >
-                Eliminar
-              </button>
-              <button>
-                <Link to={'/editarProvedor/' + data.id}>Edit</Link>
-              </button>
-            </section>
+            <div className='col-md-4' key={data.id}>
+              <div className='card mb-4 my-3'>
+                <img className='card-img-top' src={data.urlImgG} />
+                <img className='card-img-top' src={data.urlImgL} />
+                <div className='card-body text-center'>
+                  <h5 className='card-title'>{data.nombre}</h5>
+                  <p className='card-text'>{data.nombreGerente}</p>
+                  <p className='card-text'>{data.nit}</p>
+                  <p className='card-text'>{data.ciudad}</p>
+                  <p className='card-text'>{data.direccion}</p>
+                  <p className='card-text'>{data.telefono}</p>
+                  <button
+                    className='btn btn-danger w-50 my-2'
+                    onClick={() => {
+                      eliminarProvedor(data.id)
+                    }}
+                  >
+                    Eliminar
+                  </button>
+                  <button className='btn btn-primary w-50'>
+                    <Link to={'/editarProvedor/' + data.id}>Edit</Link>
+                  </button>
+                </div>
+              </div>
+            </div>
           ))}
-        </section>
-      </main>
+        </div>
+      </div>
     </>
   )
 }

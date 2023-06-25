@@ -36,51 +36,86 @@ const CrearCliente = () => {
   return (
     <>
       <Header />
-      <main>
-        <form>
+      <form>
+        <div className='form-group form-control-sm'>
           <input
-            onChange={(e) => setBarrio(e.target.value)}
-            placeholder={'Barrio: '}
-            type='text'
-          />
-          <input
-            onChange={(e) => setCiudad(e.target.value)}
-            placeholder={'Ciudad: '}
-            type='text'
-          />
-          <input
-            onChange={(e) => setCorreo(e.target.value)}
-            placeholder={'Correo: '}
-            type='text'
-          />
-          <input
-            onChange={(e) => setDireccion(e.target.value)}
-            placeholder={'Direccion: '}
-            type='text'
-          />
-          <input
-            onChange={(e) => setDocumento(e.target.value)}
-            placeholder={'Documento: '}
-            type='text'
-          />
-          <input
+            className='form-control'
             onChange={(e) => setNombre(e.target.value)}
-            placeholder={'Nombre: '}
+            value={nombre}
+            placeholder='Nombre:'
             type='text'
           />
+        </div>
+        <div className='form-group form-control-sm'>
           <input
+            className='form-control'
+            onChange={(e) => setDocumento(e.target.value)}
+            value={documento}
+            placeholder='Documento:'
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
             onChange={(e) => setTelefono(e.target.value)}
-            placeholder={'Telefono: '}
+            value={telefono}
+            placeholder='Telefono:'
             type='text'
           />
-          <input onChange={(e) => setImg(e.target.files[0])} type='file' />
+        </div>
+        <div className='form-group form-control-sm'>
           <input
+            className='form-control'
+            onChange={(e) => setCorreo(e.target.value)}
+            value={correo}
+            placeholder='Correo:'
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control '
+            onChange={(e) => setBarrio(e.target.value)}
+            value={barrio}
+            placeholder='Barrio:'
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control '
+            onChange={(e) => setCiudad(e.target.value)}
+            value={ciudad}
+            placeholder='Ciudad:'
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control'
+            onChange={(e) => setDireccion(e.target.value)}
+            value={direccion}
+            placeholder='Direccion:'
+            type='text'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='form-control-file'
+            onChange={(e) => setImg(e.target.files[0])}
+            type='file'
+          />
+        </div>
+        <div className='form-group form-control-sm'>
+          <input
+            className='btn btn-primary'
             onClick={agregarCliente}
             type='button'
             value='Agregar Cliente'
           />
-        </form>
-      </main>
+        </div>
+      </form>
     </>
   )
 }
