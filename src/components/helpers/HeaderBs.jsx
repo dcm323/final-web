@@ -5,19 +5,14 @@ const HeaderBs = () => {
     <>
       <nav className='navbar navbar-expand-lg navbar-light bg-light'>
         <div className='container'>
-          <button
-            className='navbar-toggler'
-            type='button'
-            data-toggle='collapse'
-            data-target='#navbarNav'
-            aria-controls='navbarNav'
-            aria-expanded='false'
-            aria-label='Toggle navigation'
+          <a className='navbar-brand' href='/'>
+            Home
+          </a>
+          <div
+            className='collapse navbar-collapse justify-content-end'
+            id='navbarNav'
           >
-            <span className='navbar-toggler-icon'></span>
-          </button>
-          <div className='collapse navbar-collapse' id='navbarNav'>
-            <ul className='navbar-nav ml-auto'>
+            <ul className='navbar-nav'>
               <li className='nav-item'>
                 <a className='nav-link' href='/clientes'>
                   Clientes
@@ -30,7 +25,7 @@ const HeaderBs = () => {
               </li>
               <li className='nav-item'>
                 <a className='nav-link' href='/provedores'>
-                  Provedores
+                  Proveedores
                 </a>
               </li>
               <li className='nav-item'>
@@ -40,7 +35,12 @@ const HeaderBs = () => {
               </li>
               <li className='nav-item'>
                 <a className='nav-link' href='/passwords'>
-                  Passwords
+                  Contraseñas
+                </a>
+              </li>
+              <li className='nav-item'>
+                <a className='nav-link' href='/movies'>
+                  Movie-Api
                 </a>
               </li>
             </ul>
