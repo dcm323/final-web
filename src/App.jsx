@@ -12,11 +12,17 @@ import EditarProvedor from './components/layouts/provedores/EditarProvedor'
 import CrearProductos from './components/layouts/productos/CrearProductos'
 import EditarProductos from './components/layouts/productos/EditarProductos'
 import ListarProductos from './components/layouts/productos/ListarProductos'
+
+import CrearEmpleado from './components/layouts/empleados/CrearEmpleado'
+import ListarEmpleado from './components/layouts/empleados/ListarEmpleado'
+import EditarEmpleado from './components/layouts/empleados/EditarEmpleado'
+
 import Movies from './components/layouts/Movies'
 import Admin from './components/layouts/Admin'
 import Commerce from './components/layouts/Commerce'
 import Clientes from './components/layouts/clientes/view/Clientes'
 import Productos from './components/layouts/productos/view/Productos'
+import Empleados from './components/layouts/empleados/view/Empleados'
 
 const router = createBrowserRouter([
   {
@@ -77,7 +83,23 @@ const router = createBrowserRouter([
     path: '/productos',
     element: <Productos />,
   },
-
+  //paths de empleados
+  {
+    path: '/crearEmpleado',
+    element: <CrearEmpleado />,
+  },
+  {
+    path: '/listarEmpleado',
+    element: <ListarEmpleado />,
+  },
+  {
+    path: '/editarEmpleado/:id',
+    element: <EditarEmpleado />,
+  },
+  {
+    path: '/empleados',
+    element: <Empleados />,
+  },
   //paths adicionales
   {
     path: '/movies',

@@ -14,7 +14,7 @@ const CrearCliente = () => {
   const [nombre, setNombre] = useState('')
   const [telefono, setTelefono] = useState('')
   const [img, setImg] = useState(null)
-  // UseNavigate = retorno a otro path al realizar una accion
+
   const returnListado = useNavigate()
 
   const agregarCliente = async () => {

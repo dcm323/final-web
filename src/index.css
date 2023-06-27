@@ -133,19 +133,23 @@ nav {
   padding: 15vh;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-}
-
 .card:hover {
   background-color: lightblue;
   transform: scale(1.01);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: #000000 1px solid;
+  padding: 10px;
+}
+.card-admin a {
+  text-decoration: none;
+  color: black;
 }
 
 .card a {

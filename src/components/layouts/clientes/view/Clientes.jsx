@@ -22,10 +22,10 @@ const Clientes = () => {
       <div className='container '>
         <div className='row'>
           {clientes.map((data) => (
-            <div className='col-md-4 my-3' key={data.id}>
+            <div className='col-md-4 my-3 ' key={data.id}>
               <div className='card h-100'>
                 <img className='card-img-top' src={data.urlImg} />
-                <div className='card-body'>
+                <div className='card-body text-center'>
                   <h5 className='card-title'>{data.nombre}</h5>
                   <p className='card-text'>{data.documento}</p>
                   <p className='card-text'>{data.correo}</p>

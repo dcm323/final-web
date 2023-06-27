@@ -27,7 +27,7 @@ const Provedores = () => {
               <div className='card h-100'>
                 <img className='card-img-top' src={data.urlImgG} />
                 <img className='card-img-top' src={data.urlImgL} />
-                <div className='card-body'>
+                <div className='card-body text-center'>
                   <h5 className='card-title'>{data.nombre}</h5>
                   <p className='card-text'>{data.direccion}</p>
                   <p className='card-text'>{data.ciudad}</p>
