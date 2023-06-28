@@ -23,6 +23,10 @@ import Commerce from './components/layouts/Commerce'
 import Clientes from './components/layouts/clientes/view/Clientes'
 import Productos from './components/layouts/productos/view/Productos'
 import Empleados from './components/layouts/empleados/view/Empleados'
+import Boveda from './components/layouts/contraseñas/view/Boveda'
+import CrearWeb from './components/layouts/contraseñas/CrearWeb'
+import ListarWeb from './components/layouts/contraseñas/ListarWebs'
+import EditarWeb from './components/layouts/contraseñas/EditarWeb'
 
 const router = createBrowserRouter([
   {
@@ -100,6 +104,24 @@ const router = createBrowserRouter([
     path: '/empleados',
     element: <Empleados />,
   },
+  //paths de Contraseñas
+  {
+    path:'/boveda',
+    element:<Boveda/>
+  },
+  {
+    path:'/crearWeb',
+    element: <CrearWeb/>
+  },
+  {
+    path:'/listarBoveda',
+    element:<ListarWeb/>
+  },
+  {
+    path:'/editarWeb/:id',
+    element:<EditarWeb/>
+  },
+
   //paths adicionales
   {
     path: '/movies',
