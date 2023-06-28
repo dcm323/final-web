@@ -9,23 +9,19 @@ const CrearWeb = () => {
   const [nombre, setNombre] = useState('')
   const [usuario, setUsuario] = useState('')
   const [password, setPassword] = useState('')
-  const [imagenUrl, setImagenUrl] = useState('')
+  const [imagenUrl, setImagenUrl] = useState('null')
   
   // UseNavigate = retorno a otro path al realizar una accion
   const returnListado = useNavigate()
 
   const agregarWeb = async () => {
     const urlImg = await subirImagen(imagenUrl)
-    
-    console.log(urlImg)
-    
-
     const bovedaCollection = collection(database, 'boveda')
     const boveda = {
       nombre,
       usuario,
       password,
-      imagenUrl,
+      urlImg,
     }
     await addDoc(bovedaCollection, boveda)
     returnListado('/listarBoveda')
