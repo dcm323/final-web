@@ -29,8 +29,8 @@ const Admin = () => {
         </div>
         <div className='card-admin text-center rounded'>
           <h1>Contraseñas</h1>
-          <Link to={'/path'}>Crear</Link>
-          <Link to={'/path'}>Listar</Link>
+          <Link to={'/crearWeb'}>Crear</Link>
+          <Link to={'/listarBoveda'}>Listar</Link>
         </div>
       </section>
     </>
