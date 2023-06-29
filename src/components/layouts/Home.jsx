@@ -7,6 +7,7 @@ const Home = () => {
     <>
       <Header />
       <main className='commerce'>Home</main>
+      
     </>
   )
 }

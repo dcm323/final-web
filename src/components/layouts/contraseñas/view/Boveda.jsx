@@ -25,7 +25,7 @@ const Boveda = () => {
           {boveda.map((data) => (
             <div className='col-md-4 my-3' key={data.id}>
               <div className='card h-100'>
-                <img className='card-img-top' src={data.imagenUrl} />
+                <img className='card-img-top' src={data.urlImg} />
                 <div className='card-body text-center'>
                   <h5 className='card-title'>{data.nombre}</h5>
                   <p className='card-text'>{data.usuario}</p>
