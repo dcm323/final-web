@@ -135,6 +135,10 @@ const router = createBrowserRouter([
     path: '/commerce',
     element: <Commerce />,
   },
+  {
+    path:'/passwords',
+    element:<Boveda/>
+  }
 ])
 
 function App() {

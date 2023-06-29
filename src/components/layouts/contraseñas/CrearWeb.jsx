@@ -17,7 +17,7 @@ const CrearWeb = () => {
   const agregarWeb = async () => {
     const urlImg = await subirImagen(imagenUrl)
     
-    console.log(urlImg)
+    
     
 
     const bovedaCollection = collection(database, 'boveda')
@@ -25,7 +25,7 @@ const CrearWeb = () => {
       nombre,
       usuario,
       password,
-      imagenUrl,
+      urlImg,
     }
     await addDoc(bovedaCollection, boveda)
     returnListado('/listarBoveda')
